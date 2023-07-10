@@ -1,5 +1,7 @@
 # Extensible-Application-Demo
 
+![colour-coded](./src/colour-coded.png)
+
 Current Output For Demonstration Purposes:
 
 Run #1
