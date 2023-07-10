@@ -1,4 +1,4 @@
-from models.callback import Callback
+from models.extension import Extension
 
 class Emitter:
     """
@@ -8,19 +8,19 @@ class Emitter:
     def __init__(self):
         self.listeners = []
     
-    def subscribe(self, pckg: Callback):
+    def subscribe(self, pckg: Extension):
         """
             This method subscribes to the emitter.\n
             このメソッドは、エミッターに購読します。
         """
         self.listeners.append(pckg)
 
-    def unsubscribe(self, callback):
+    def unsubscribe(self, pckg: Extension):
         """ 
             This method unsubscribes from the emitter.\n
             このメソッドは、エミッターから購読を解除します。
         """
-        self.listeners.remove(callback)
+        self.listeners.remove(pckg)
 
     def emit(self, *args, **kwargs):
         """
